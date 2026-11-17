@@ -91,3 +91,21 @@ dialog p{line-height:1.5}
 .closing img{opacity:.45;width:43%;right:-16%;top:20%}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+
+@media (max-width: 640px) {
+  .header { gap: 12px; }
+  .header nav { gap: 8px; flex-wrap: wrap; }
+  .hero { display: grid; gap: 14px; }
+  .hero h1 { font-size: clamp(48px, 15vw, 96px); }
+  .hero-art { position: relative; inset: auto; width: 100%; aspect-ratio: 1.4; }
+  .hero-art img { width: 76%; height: 98%; object-fit: contain; right: 12%; bottom: 0; }
+  .hero-art i { right: 0; width: 85%; }
+  .rays { left: 26%; }
+  .programs { grid-template-columns: minmax(0, 1fr); }
+  .programs h2 { font-size: clamp(26px, 8.4vw, 50px); line-height: .95; }
+  .programs h2 br { display: initial; }
+  .card { padding: 4vw 5vw; }
+  .card img { width: 100%; }
+  .card b { right: 6%; bottom: 10%; font-size: 1.35em; }
+}
