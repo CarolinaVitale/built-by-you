@@ -1,0 +1,93 @@
+:root{--paper:#fbf2e4;--ink:#101010;--blue:#064474;--lime:#dcff6b;--edge:5%;--display:"Arial Black", "Helvetica Neue", Arial, sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,sans-serif}
+h1,h2,h3,p{margin:0}
+h1,h2,h3,.logo,.card{font-family:var(--display);font-weight:950;text-transform:uppercase;letter-spacing:-.065em}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer}
+:focus-visible{outline:3px solid #bd5b20;outline-offset:5px}
+.header{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:1.9vw var(--edge) .8vw}
+.logo{font-size:clamp(24px,3.2vw,54px);line-height:.76}
+nav{display:flex;gap:clamp(14px,3.8vw,64px);padding-top:.7em}
+nav a,.button{text-transform:uppercase;font-weight:800;letter-spacing:.1em;font-size:clamp(11px,1.2vw,18px)}
+nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.button{display:inline-block;background:var(--ink);color:var(--paper);padding:.65em 1.25em;border-radius:.85em;white-space:nowrap}
+.button:hover{background:var(--blue)}
+.hero{position:relative;isolation:isolate;overflow:hidden;padding:2.8vw var(--edge) 3.2vw}
+.hero-copy{position:relative;z-index:1;width:max-content;max-width:100%}
+.hero h1,.closing h2{font-size:13.7vw;line-height:.76;letter-spacing:-.085em}
+.hero h1{transform:rotate(-2.7deg);transform-origin:left center}
+.hero p,.closing p,.manifesto p,.pillars p{font-weight:800;text-transform:uppercase;letter-spacing:.22em}
+.hero p{font-size:1.7vw;margin:1.65vw 0 2vw}
+.hero .button{font-size:1.75vw;padding:.85em 1.8em}
+.hero-art{position:absolute;inset:0 0 0 52%;pointer-events:none}
+.hero-art i,.hero-art::after{position:absolute;content:"";display:block;background:var(--lime);z-index:-1}
+.hero-art i{width:95%;height:71%;top:0;right:-8%;border-radius:57% 0 52% 0;transform:rotate(13deg) skewX(-14deg)}
+.hero-art::after{width:74%;height:35%;right:8%;bottom:-18%;border-radius:65% 40% 0 0;transform:rotate(-28deg)}
+.hero-art img{position:absolute;width:87%;right:11%;bottom:4%;transform:rotate(-3deg)}
+.rays{position:absolute;left:23%;top:6%;width:15%;height:16%;transform:rotate(29deg)}
+.rays b{position:absolute;display:block;width:48%;height:8%;background:var(--ink);left:0;top:48%}
+.rays b:first-child{transform:translateY(-280%) rotate(28deg)}
+.rays b:last-child{transform:translateY(280%) rotate(-18deg)}
+.manifesto{display:grid;grid-template-columns:65% 35%;background:var(--blue);color:var(--paper);padding:2.3vw var(--edge) 2.5vw;align-items:center}
+.manifesto h2{font-size:5.65vw;line-height:.83}
+.manifesto div{border-left:2px solid;padding-left:18%}
+.manifesto p{font-size:1.38vw;line-height:1.55}
+.manifesto p+p{margin-top:1.5em}
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);padding:1.55vw 1.5% 3.25vw;text-align:center}
+.pillars article{position:relative}
+.pillars article+article::before{content:"";position:absolute;bottom:0;left:0;width:1px;height:45%;background:var(--ink)}
+.pillars img{height:10.6vw;width:65%;object-fit:contain;mix-blend-mode:multiply}
+.pillars h3{font-size:2.55vw;margin:.7vw 0 .25vw}
+.pillars p{font-size:1.24vw;line-height:1.4}
+.programs{background:var(--lime);padding:1.6vw 1.8%;display:grid;grid-template-columns:25% 75%;align-items:center;gap:0}
+.programs h2{font-size:4.95vw;line-height:.9;transform:rotate(-3deg)}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.6vw}
+.card{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;text-align:left;border:0;background:var(--paper);color:var(--ink);padding:1.45vw 1.7vw;min-height:21vw;font-size:1.55vw;line-height:1;clip-path:polygon(3% 9%,100% 0,98% 99%,0 94%)}
+.card:nth-child(odd){background:var(--blue);color:var(--paper);clip-path:polygon(4% 10%,99% 0,98% 93%,0 100%)}
+.card:last-child{clip-path:polygon(0 4%,98% 12%,100% 94%,5% 93%)}
+.card:hover,.card:focus-visible{transform:translateY(-.3vw);box-shadow:inset 0 0 0 7px currentColor}
+.card img{width:100%;height:11vw;object-fit:contain;margin-bottom:1vw;mix-blend-mode:multiply}
+.card:nth-child(odd) img{filter:invert(1);mix-blend-mode:screen}
+.card b{position:absolute;right:8%;bottom:14%;font-size:1.7em}
+.closing{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;gap:3%;padding:2.65vw 2.7% 2vw}
+.closing h2{width:48%;flex:none}
+.closing-copy{border-left:2px solid;padding-left:4.3%;z-index:1}
+.closing p{font-size:1.65vw;line-height:1.4;margin-bottom:2.2vw}
+.closing img{position:absolute;width:32%;right:-6%;top:2%;z-index:-1;background:var(--lime);border-radius:50%;mix-blend-mode:multiply}
+dialog{width:min(90vw,480px);border:0;background:var(--paper);color:var(--ink);padding:2.5rem}
+dialog::backdrop{background:#101010a0}
+dialog h2{font-size:2.1rem;margin:0 1rem .8rem 0}
+dialog p{line-height:1.5}
+.close{position:absolute;right:.6rem;top:.4rem;border:0;background:none;font-size:1.8rem;color:inherit}
+@media(max-width:640px){
+.header{flex-wrap:wrap;align-items:center;padding-top:18px}
+.header nav{order:1;width:100%;justify-content:space-between;padding:9px 0 4px}
+.hero{padding-top:25px;padding-bottom:20px}
+.hero h1{font-size:15vw}
+.hero p{font-size:clamp(9px,2vw,13px);margin:12px 0}
+.hero .button,.closing .button{font-size:11px}
+.hero-art{left:49%;bottom:13%}
+.hero-art img{width:98%;right:0;bottom:8%}
+.manifesto{grid-template-columns:1fr;padding:22px var(--edge);gap:16px}
+.manifesto h2{font-size:9.6vw}
+.manifesto div{padding-left:4%}
+.manifesto p{font-size:11px}
+.pillars{grid-template-columns:repeat(2,1fr);row-gap:22px;padding:18px 5% 24px}
+.pillars article:nth-child(3)::before{display:none}
+.pillars img{height:23vw}
+.pillars h3{font-size:5.4vw}
+.pillars p{font-size:10px}
+.programs{grid-template-columns:1fr;padding:22px 5%}
+.programs h2{font-size:10vw;margin:0 0 13px;transform:none}
+.programs h2 br{display:none}
+.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.card{min-height:43vw;font-size:clamp(11px,3.1vw,17px);padding:4vw}
+.card img{height:22vw;margin-bottom:2vw}
+.closing{padding:24px 5%;align-items:flex-start}
+.closing h2{font-size:12vw}
+.closing p{font-size:10px}
+.closing img{opacity:.45;width:43%;right:-16%;top:20%}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
